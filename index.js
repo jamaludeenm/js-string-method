@@ -18,21 +18,21 @@ console.log(length);
 //JavaScript String slice
 {
 let str = "im the only one superrr one";
-let part = str.substring(16, 23);
+let part = str.substring(8, 4);
 console.log(part);
 }
 
 //JavaScript String substring
 {
 let str = "Apple, Banana, Kiwi";
-let part = str.substring(0, 13);
+let part = str.substring(3, 13);
 console.log(part);
 }
 
 //JavaScript String substr
 {
 let str = "Apple, Banana, Kiwi";
-let part = str.substr(7, 6);
+let part = str.substr(7);
 console.log(part);
 }
 
@@ -40,7 +40,7 @@ console.log(part);
 
 function touch(){
 	let text=document.getElementById('tag').innerHTML;
-	document.getElementById('tag').innerHTML=text.replace("black","white");
+	document.getElementById('tag').innerHTML=text.replace(/black/g,"white");
 }
 //replace case insensitive, use a regular expression with an /i flag (insensitive)
 //To replace all matches, use a regular expression with a /g flag (global match)
@@ -64,14 +64,14 @@ console.log(trimlength);
 //JavaScript String padStart
 {
 let text = "5";
-let padded = text.padStart(4,"x");
+let padded = text.padStart(9,"x");
 console.log(padded);
 }
 
 //JavaScript String padEnd
 {
 let text = "5";
-let padded = text.padEnd(4,"x");
+let padded = text.padEnd(4,"0");
 console.log(padded);
 }
 
@@ -95,6 +95,61 @@ console.log(position);
 
 {
 let text = "return unique code";
-let char = text.charCodeAt(7);
+let char = text.charCodeAt(6);
 console.log(char);
+}
+
+//JavaScript String split()
+{
+let text = "a dt,b,c,d,e,f";
+const myArray = text.split(" ");
+console.log(myArray[0]);
+}
+
+//JavaScript String match
+{
+	let text = "when will come"
+    let res=text.match("ill");
+	console.log(res);
+}
+// JavaScript prototype
+{
+	function employee(name, jobtitle, born) {
+  this.name = name;
+  this.jobtitle = jobtitle;
+  this.born = born;
+}
+employee.prototype.salary = 2000;
+
+const fred = new employee("Fred Flintstone", "Caveman", 1970);
+console.log(fred.salary)
+}
+
+//JavaScript String repeat
+{
+	let text = "Hello world!";
+let result = text.repeat(2);
+console.log(result);
+}
+
+//JavaScript String search
+
+{
+	let text = "Mr. Blue has a blue house"
+let position = text.search("Blue");
+console.log(position);
+}
+
+//The localeCompare() 
+// localeCompare() returns one of 3 numbers indicating the sort order.
+
+// -1 if sorted before
+// 1 if sorted after
+// 0 if equal
+
+{
+	let text1 = "cd";
+let text2 = "ab";
+let result = text2.localeCompare(text1);
+console.log(result);
 }
